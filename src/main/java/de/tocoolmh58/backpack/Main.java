@@ -1,18 +1,15 @@
+/*
+* Original Source-Code by @DerBanko
+*/
+
 package de.tocoolmh58.backpack;
 
 import de.tocoolmh58.backpack.backpack.BackpackManager;
 import de.tocoolmh58.backpack.command.BackpackCommand;
 import de.tocoolmh58.backpack.utils.Config;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public final class Main extends JavaPlugin {
 

@@ -2,8 +2,7 @@ name: Backpack
 author: Tocoolmh58
 version: ${project.version}
 main: de.tocoolmh58.backpack.Main
-api-version: 1.16
-authors: [ Tocoolmh58 ]
+api-version: 1.17
 description: Ein einfaches Backpack Plugin
 commands:
   backpack:

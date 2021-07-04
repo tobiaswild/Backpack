@@ -20,7 +20,6 @@ public class BackpackManager {
         if(map.containsKey(uuid)) {
             return map.get(uuid);
         }
-
         Backpack backpack = new Backpack(uuid);
         map.put(uuid, backpack);
         return backpack;

@@ -6,6 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.inventory.Inventory;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.UUID;
 
 public class Backpack {
@@ -15,12 +16,12 @@ public class Backpack {
 
     public Backpack(UUID uuid) {
         this.uuid = uuid;
-        this.inventory = Bukkit.createInventory(null, 27, Bukkit.getPlayer(uuid).getName() + "'s Backpack");
+        this.inventory = Bukkit.createInventory(null, 27, Objects.requireNonNull(Bukkit.getPlayer(uuid)).getName() + "'s Backpack");
     }
 
     public Backpack(UUID uuid, String base64) throws IOException {
         this.uuid = uuid;
-        this.inventory = Bukkit.createInventory(null, 27, Bukkit.getPlayer(uuid).getName() + "'s Backpack");
+        this.inventory = Bukkit.createInventory(null, 27, Objects.requireNonNull(Bukkit.getPlayer(uuid)).getName() + "'s Backpack");
         this.inventory.setContents(Base64.itemStackArrayFromBase64(base64));
     }
 
