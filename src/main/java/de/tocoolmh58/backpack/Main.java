@@ -1,7 +1,3 @@
-/*
-* Original Source-Code by @DerBanko
-*/
-
 package de.tocoolmh58.backpack;
 
 import de.tocoolmh58.backpack.backpack.BackpackManager;
@@ -10,6 +6,12 @@ import de.tocoolmh58.backpack.utils.Config;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+
+/*
+ * Original Source-Code by DerBanko on YouTube and GitHub
+ * https://www.youtube.com/watch?v=-ozNHuoioi0
+ * https://github.com/DerBanko/TutorialReloaded
+ */
 
 public final class Main extends JavaPlugin {
 
