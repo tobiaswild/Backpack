@@ -12,7 +12,6 @@ public class BackpackManager {
 
     public BackpackManager() {
         map = new HashMap<>();
-
         load();
     }
 
@@ -31,13 +30,10 @@ public class BackpackManager {
 
     private void load() {
         Config config = Main.getInstance().getConfiguration();
-
         List<String> uuids = config.getConfig().getStringList("backpacks");
-
         uuids.forEach(s -> {
             UUID uuid = UUID.fromString(s);
             String base64 = config.getConfig().getString("backpack." + s);
-
             try {
                 map.put(uuid, new Backpack(uuid, base64));
             } catch (IOException e) {
@@ -48,13 +44,10 @@ public class BackpackManager {
 
     public void save() {
         Config config = Main.getInstance().getConfiguration();
-
         List<String> uuids = new ArrayList<>();
-
         for (UUID uuid : map.keySet()) {
             uuids.add(uuid.toString());
         }
-
         config.getConfig().set("backpacks", uuids);
         map.forEach((uuid, backpack) -> config.getConfig().set("backpack." + uuid.toString(), backpack.toBase64()));
     }
